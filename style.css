@@ -1,0 +1,43 @@
+.navbar-brand {
+    font-size: 3rem;
+    color: #E90074;
+}
+
+.hand {
+    font-size: 6rem;
+    padding-right: 10%
+}
+
+.collapse {
+    font-size: 2rem;
+}
+
+.game-board {
+    margin: 5% 10%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 10%;
+}
+
+.game-tile {
+    height: 10rem;
+    background-color: white;
+}
+
+@media (max-width: 768px) {
+    .game-board {
+
+        gap: 2%;
+    }
+
+    .hand {
+        font-size: 2REM;
+        padding: 2%;
+    }
+
+}
+
+.kim {
+    background-image: url(https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExY3Z2Y3dieXp4cWlvNGpvc3A0bWx3MjcyODhrbHN4cTN1M2w5bnBpMyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/YESRhUJfZtOZG/giphy.gif);
+    background-size: 10REM;
+}
