@@ -129,3 +129,20 @@ switch (key, randomCharacter) {
         "<img height = '200px' src =" + characterArray[randomCharacter].imageURL +">";
         break;
 }
+//Event Listener to listen for the click of the user's mouse//
+
+document.addEventListener("click", function(event){
+    const clickedElement = event.target;
+    const tagName = clickedElement.tagName;
+    if (tagName === 'IMG') {
+        console.log ('you win');
+    }else
+    {console.log("you lose");}
+
+  
+
+})
+
+function handlelick () {
+
+}
