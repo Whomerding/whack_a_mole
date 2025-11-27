@@ -24,6 +24,18 @@
 
 }
 
+.score {
+    background-color: white;
+    height: 5rem;
+    width: 15rem;
+}
+
+.score-text {
+    color: #FFF078;
+    font-family: "Science Gothic", sans-serif;
+    font-size: 3REM;
+}
+
 @media (max-width: 768px) {
     .game-board {
 
@@ -35,9 +47,4 @@
         padding: 2%;
     }
 
-}
-
-.kim {
-    background-image: url(https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExY3Z2Y3dieXp4cWlvNGpvc3A0bWx3MjcyODhrbHN4cTN1M2w5bnBpMyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/YESRhUJfZtOZG/giphy.gif);
-    background-size: 10REM;
 }

@@ -6,7 +6,7 @@ const characterArray = [
         firstName: "Kimmie",
         lastName: "Kouture",
         imageURL:  "resources/images/beyonce.png",
-        points: 10,
+        points: 5,
         timePopUp: 5,
     },
     {
@@ -14,7 +14,7 @@ const characterArray = [
         firstName: "Regina",
         lastName: "Gorge",
         imageURL: "resources/images/regina_gorge.png",
-        points: 10,
+        points: 3,
         timePopUp: 5,
     },
     {
@@ -22,7 +22,7 @@ const characterArray = [
         firstName: "J.Lo",
         lastName: "Glow",
         imageURL: "resources/images/JLo.png" ,
-        points: 10,
+        points: 2,
         timePopUp: 5,
     },
     {
@@ -30,6 +30,7 @@ const characterArray = [
         firstName: "Mariah",
         lastName: "Magnifique",
         imageURL: "resources/images/beyonce.png",
+        points: 3,
         timePopUp: 5,
     },
     {
@@ -45,7 +46,7 @@ const characterArray = [
         firstName: "Kenye",
         lastName: "Next",
         imageURL: "resources/images/regina_gorge.png",
-        points: 10,
+        points: 3,
         timePopUp: 5,
     },
 ];
@@ -131,18 +132,27 @@ switch (key, randomCharacter) {
 }
 //Event Listener to listen for the click of the user's mouse//
 
+let score = 0;
 document.addEventListener("click", function(event){
     const clickedElement = event.target;
     const tagName = clickedElement.tagName;
     if (tagName === 'IMG') {
-        console.log ('you win');
+        score = score + characterArray[randomCharacter].points;
+        console.log (score);
     }else
     {console.log("you lose");}
 
   
 
 })
+//This variable holds to player's score//
 
-function handlelick () {
+// let score = 0;
 
+function handlelick (event) {
+    const clickedElement = event.target;
+    const tagName = clickedElement.tagName;
+    if (tagName === 'IMG') {
+        score = score + characterArray[randomCharacter].points;
+    } 
 }
