@@ -133,17 +133,17 @@ switch (key, randomCharacter) {
 //Event Listener to listen for the click of the user's mouse//
 
 let score = 0;
+
+
 document.addEventListener("click", function(event){
     const clickedElement = event.target;
     const tagName = clickedElement.tagName;
     if (tagName === 'IMG') {
         score = score + characterArray[randomCharacter].points;
-        console.log (score);
+        document.querySelector(".score").innerHTML = score
+        return score;
     }else
     {console.log("you lose");}
-
-  
-
 })
 //This variable holds to player's score//
 
@@ -154,5 +154,7 @@ function handlelick (event) {
     const tagName = clickedElement.tagName;
     if (tagName === 'IMG') {
         score = score + characterArray[randomCharacter].points;
-    } 
+        console.log (score);
+    }else
+    {console.log("you lose");}
 }

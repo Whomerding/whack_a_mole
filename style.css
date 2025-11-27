@@ -28,6 +28,8 @@
     background-color: white;
     height: 5rem;
     width: 15rem;
+    font-size: 3rem;
+    text-align: end;
 }
 
 .score-text {
