@@ -3,8 +3,8 @@
 const characterArray = [
     {
         number: 0,
-        firstName: "Kimmie",
-        lastName: "Kouture",
+        firstName: "Boyonna",
+        lastName: "Say",
         imageURL:  "resources/images/beyonce.png",
         points: 5,
         timePopUp: 5,
@@ -27,25 +27,25 @@ const characterArray = [
     },
     {
         number: 3,
-        firstName: "Mariah",
-        lastName: "Magnifique",
-        imageURL: "resources/images/beyonce.png",
+        firstName: "Katy",
+        lastName: "Very",
+        imageURL: "resources/images/katy_very.png",
         points: 3,
         timePopUp: 5,
     },
     {
         number: 4,
-        firstName: "Chloe",
-        lastName: "Kardivva",
-        imageURL: "resources/images/regina_gorge.png",
+        firstName: "Kim",
+        lastName: "Kouture",
+        imageURL: "resources/images/kim_kouture.png",
         points: 10,
         timePopUp: 5,
     },
     {
         number: 5,
-        firstName: "Kenye",
-        lastName: "Next",
-        imageURL: "resources/images/regina_gorge.png",
+        firstName: "Blake",
+        lastName: "Knivey",
+        imageURL: "resources/images/blake_lively.png",
         points: 3,
         timePopUp: 5,
     },
@@ -130,31 +130,26 @@ switch (key, randomCharacter) {
         "<img height = '200px' src =" + characterArray[randomCharacter].imageURL +">";
         break;
 }
-//Event Listener to listen for the click of the user's mouse//
+
+//This holds the score//
 
 let score = 0;
 
+//Event Listener to listen for the click of the user's mouse//
 
-document.addEventListener("click", function(event){
+
+document.addEventListener("click", handleClick)
+
+
+
+function handleClick (event) {
     const clickedElement = event.target;
     const tagName = clickedElement.tagName;
     if (tagName === 'IMG') {
         score = score + characterArray[randomCharacter].points;
-        document.querySelector(".score").innerHTML = score
+        document.querySelector(".score").innerHTML = score;
+        console.log (score)
         return score;
-    }else
-    {console.log("you lose");}
-})
-//This variable holds to player's score//
-
-// let score = 0;
-
-function handlelick (event) {
-    const clickedElement = event.target;
-    const tagName = clickedElement.tagName;
-    if (tagName === 'IMG') {
-        score = score + characterArray[randomCharacter].points;
-        console.log (score);
     }else
     {console.log("you lose");}
 }
