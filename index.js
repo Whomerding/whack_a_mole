@@ -59,7 +59,7 @@ const letterArray = ["A", "B", "C" , "D", "E", "F", "G", "H", "I"];
 let randomCharacter = 2;
 
 
-let key = "B";
+let key = "";
 
 //this generates a random characters identifying number//
 function randomCharacterGenerator() {
