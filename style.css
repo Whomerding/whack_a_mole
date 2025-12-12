@@ -38,6 +38,13 @@
     font-size: 3REM;
 }
 
+#start {
+    font-size: 2REM;
+    background-color: #E90074;
+    color: #FFF078;
+    border: none;
+}
+
 @media (max-width: 768px) {
     .game-board {
 

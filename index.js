@@ -62,14 +62,17 @@ let randomCharacter = 2;
 let key = "";
 
 //this generates a random characters identifying number//
+
+let won = true;
+
 function randomCharacterGenerator() {
     randomCharacter = Math.floor(Math.random()*characterArray.length);
     console.log(randomCharacter);
     return randomCharacter;
 };
 
-
 randomCharacterGenerator();
+
 
 //this creates a random number to point to a location div in the html//
 function randomLocationGenerator() {
@@ -78,11 +81,9 @@ function randomLocationGenerator() {
     return key;
    ;
 };
+
 randomLocationGenerator();
 
-
-console.log (document.querySelector("." +key).innerHTML)
-console.log (key, randomCharacter)
 
 switch (key, randomCharacter) {
     
@@ -101,7 +102,7 @@ switch (key, randomCharacter) {
         "<img height = '200px' src =" + characterArray[randomCharacter].imageURL +">";
         break;
     case "D":
-        cdocument.querySelector("." +key).innerHTML =
+        document.querySelector("." +key).innerHTML =
         "<img height = '200px' src =" + characterArray[randomCharacter].imageURL +">";
         break;
     case "E":
@@ -138,9 +139,17 @@ let score = 0;
 //Event Listener to listen for the click of the user's mouse//
 
 
-document.addEventListener("click", handleClick)
+document.querySelector(".game-board").addEventListener("click", handleClick)
+
+document.querySelector("#start").addEventListener("click", runGame);
+
+//This function starts the game when the user clicks the start button//
 
 
+
+
+
+//This function handles the click and updates the score if the user clicks on an image//
 
 function handleClick (event) {
     const clickedElement = event.target;
@@ -148,8 +157,29 @@ function handleClick (event) {
     if (tagName === 'IMG') {
         score = score + characterArray[randomCharacter].points;
         document.querySelector(".score").innerHTML = score;
-        console.log (score)
-        return score;
+        console.log (score);
+        won =true
+        console.log (won)
+        return score, won;
     }else
-    {console.log("you lose");}
+    {console.log("you lose");
+        won = false;
+        console.log (won);
+        return won;
+    }
+}
+
+function runGame(event) {
+    if (won === true) {
+        console.log (won)
+        console.log(event);
+        
+    randomCharacterGenerator();
+    randomLocationGenerator();
+    }else {
+        console.log (won)
+        console.log(event);
+       console.log("Game Over! Your final score is " + score + ". Click OK to play again.");
+    }
+    
 }
